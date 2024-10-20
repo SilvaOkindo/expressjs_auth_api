@@ -10,6 +10,7 @@ dbConnect()
 
 const app = express()
 
+
 // middleware
 app.use(express.json())
 
@@ -25,7 +26,8 @@ app.use("/api/user", userRoutes)
 // start the serve 
 
 const PORT = process.env.PORT
+console.log(PORT)
 
-app.listen(PORT, () => {
+app.listen(3001, () => {
     console.log(`Server is running on port ${PORT}`)
 })

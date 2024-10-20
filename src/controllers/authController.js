@@ -10,9 +10,9 @@ const register = async (req, res) => {
     const newUser = new User({ username, password: hashedPassword, role });
     await newUser.save();
 
-    res.status(500).json({ message: "user is registered " });
+    res.status(201).json({ message: "user is registered " });
   } catch (error) {
-    res.status(201).json({ message: "user not registered" });
+    res.status(500).json({ message: "user not registered" });
   }
 };
 
